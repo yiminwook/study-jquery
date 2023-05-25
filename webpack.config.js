@@ -11,7 +11,7 @@ module.exports = ({ production }) => {
     resolve: {
       extensions: [".js"],
       alias: {
-        "@": path.resolve(__dirname, "./"),
+        "@": path.resolve(__dirname, "/"),
       },
     },
     module: {
