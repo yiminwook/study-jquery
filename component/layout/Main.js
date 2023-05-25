@@ -3,7 +3,7 @@ class Main {
 
   constructor({ $target }) {
     this.$target = $target;
-    this.$main = $("<main>main</main>");
+    this.$main = $("<main id=main >main</main>");
     this.$target.append(this.$main);
   }
 

@@ -1,0 +1,16 @@
+.keyframes(@name; @arguments) {
+  @-moz-keyframes @name {
+    @arguments();
+  }
+  @-webkit-keyframes @name {
+    @arguments();
+  }
+  @keyframes @name {
+    @arguments();
+  }
+}
+
+.keyframes(fade-in;{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  });

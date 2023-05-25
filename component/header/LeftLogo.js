@@ -7,7 +7,6 @@ class LeftLogo {
     this.$leftlogo.addClass("left-logo");
     this.$link = $("<a></a>");
     this.$link.attr("href", "https://www.inven.co.kr");
-    console.log(this.$link);
     this.$leftlogo.append(this.$link);
     this.$target.append(this.$leftlogo);
   }
