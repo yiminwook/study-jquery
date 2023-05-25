@@ -1,8 +1,30 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@charset "utf-8";
 
+// display: inline; float: left; 초기화 작업
+.reset {
+  display: block;
+  float: none;
+}
+
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset {
+  .reset();
+}
+
+/* reset css */
 html,
 body,
 div,
@@ -56,14 +78,6 @@ fieldset,
 form,
 label,
 legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
 article,
 aside,
 canvas,
@@ -88,9 +102,36 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  font-family: "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo",
+    sans-serif;
 }
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+  font-size: 13px;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -106,7 +147,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: normal;
 }
 ol,
 ul {
@@ -126,4 +167,26 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  cursor: pointer;
+}
+b {
+  font-weight: bold;
+}
+em {
+  font-style: normal;
 }
