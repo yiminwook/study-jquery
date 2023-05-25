@@ -12,7 +12,7 @@ class SearchSection {
     this.$searchSection.addClass("search-section");
 
     this.$searchForm = new SearchForm({ $target: this.$searchSection });
-    this.$searchWord = $("<div></div");
+    this.$searchWord = $("<ul></ul");
     this.$searchWord.addClass("search-word");
 
     this.$searchSection.append(this.$searchInput);
@@ -29,12 +29,11 @@ class SearchSection {
   render() {
     if (this.$searchWord) {
       this.data.list.map((text) => {
-        let keywordLink = $(`<a>${text}</a>`);
-        keywordLink.on("click", () => {
-          window.location.href = `https://www.inven.co.kr/search/webzine/top/${encodeURIComponent(
+        let keywordLink =
+          $(`<li key=header-keyword-${text}><a href=https://www.inven.co.kr/search/webzine/top/${encodeURIComponent(
             text
-          )}`;
-        });
+          )}>${text}</a>s</li>
+        `);
         this.$searchWord.append(keywordLink);
       });
     }

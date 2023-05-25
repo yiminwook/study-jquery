@@ -96,14 +96,17 @@
       }
 
       .search-word {
+        display: flex;
         padding: 0 20px;
         height: 20px;
         text-align: center;
-        a {
-          color: var(--var-header-ad-color);
-          font-size: 14px;
-          margin: 0 15px 0 0;
-          font-weight: 600;
+        li {
+          a {
+            color: var(--var-header-ad-color);
+            font-size: 14px;
+            margin: 0 15px 0 0;
+            font-weight: 600;
+          }
         }
       }
     }
@@ -114,6 +117,90 @@
       bottom: 0;
       right: 0;
       width: 340px;
+    }
+  }
+}
+
+.header-nav {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid #e82f2f;
+
+  nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 1060px;
+    height: 100%;
+
+    ul {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 800px;
+      height: 52px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        width: 1px;
+        height: 22px;
+        background-color: #d1d8e4;
+      }
+
+      li {
+        width: 14.28%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 16px;
+        height: 100%;
+        color: #454545;
+        height: 100%;
+        text-align: center;
+
+        a {
+          &:hover {
+            color: #e72f2f;
+          }
+        }
+      }
+    }
+
+    .site-map {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 800px);
+      height: 52px;
+
+      button {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: #454545;
+
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 12px 0 0;
+          width: 15px;
+          height: 15px;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.2 15.2'%3E%3Cstyle%3E.st0%7Bfill:%23bf0404%7D%3C/style%3E%3Cpath d='M0 9.2h6v6H0zM0 1.2h6v6H0zM7.959 15.214v-6h6v6zM6.727 4.201 10.97-.04 15.212 4.2 10.97 8.444z' class='st0'/%3E%3C/svg%3E");
+          background-image: no-repeat;
+          background-size: 100%;
+          background-position: center;
+        }
+      }
     }
   }
 }
