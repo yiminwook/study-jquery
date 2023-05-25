@@ -1,0 +1,46 @@
+.slider {
+  background-color: #312a2a;
+  position: relative;
+  width: 800px;
+  height: 353px;
+  overflow: hidden;
+
+  .slider-nav {
+    z-index: 20;
+    top: 8px;
+    right: 5px;
+    position: absolute;
+    display: flex;
+    width: 155px;
+    height: 270px;
+    gap: 3px;
+    flex-direction: column;
+
+    li {
+      height: 36px;
+      background-color: rgba(29, 29, 29, 0.8);
+      border: 1px solid #202020;
+      color: #a3a3a3;
+
+      &:hover {
+        background-color: #1d1d1d;
+        color: #fff;
+      }
+
+      a {
+        line-height: 36px;
+        height: 36px;
+        display: block;
+        width: 100%;
+        color: inherit;
+        font-family: "sans-serif";
+        font-weight: 500;
+        text-align: center;
+        margin: auto;
+        font-size: 15px;
+      }
+    }
+  }
+  .slider-inner {
+  }
+}

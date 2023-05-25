@@ -28,7 +28,7 @@ class SearchSection {
 
   render() {
     if (this.$searchWord) {
-      this.data.list.map((text) => {
+      this.data.list.forEach((text) => {
         let keywordLink =
           $(`<li key=header-keyword-${text}><a href=https://www.inven.co.kr/search/webzine/top/${encodeURIComponent(
             text
