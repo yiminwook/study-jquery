@@ -1,7 +1,7 @@
 .header-top {
   position: relative;
-  background-image: var(--var-header-ad-bg-img);
-  background-color: var(--var-header-ad-bg-color);
+  // background-image: var(--var-header-ad-bg-img);
+  // background-color: var(--var-header-ad-bg-color);
   height: 160px;
   background-repeat: no-repeat;
   background-position: center;
@@ -9,9 +9,60 @@
   border-bottom: 1px solid #d1d8e4;
 
   &.active {
+    //scroll nav
     height: 65px;
-    border-bottom: 0;
-    background-image: var(--var-header-ad-bg-scroll-img);
+    border-bottom: 2px solid #bf0404;
+    // background-image: var(--var-header-ad-bg-scroll-img);
+
+    .header-inner {
+      .left-logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 134px;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0, -50%);
+          width: 2px;
+          height: 18px;
+          background-color: #cbcbcb;
+        }
+
+        & > a {
+          margin: 0;
+          width: 112px;
+          height: 34px;
+          background-size: 100%;
+          background-position: center;
+        }
+      }
+
+      .search-section {
+        top: 0;
+
+        form {
+          margin: 0;
+          width: 670px;
+          background-color: rgba(0, 0, 0, 0);
+          border: none;
+
+          input {
+            padding: 0;
+            font-size: 20px;
+
+            &::placeholder {
+              text-align: left;
+              color: #cdcdcd;
+            }
+          }
+        }
+      }
+    }
   }
 
   .header-inner {
@@ -29,18 +80,20 @@
       margin: 0 20px 0 0;
 
       & > a {
-        position: absolute;
+        // position: absolute;
+        // right: 0;
+        // top: 46%;
+        // transform: translateY(-50%);
+        // background-position: center;
         display: block;
-        right: 0;
-        top: 46%;
-        transform: translateY(-50%);
         margin: 0 auto;
-        width: 130px;
-        height: 50px;
-        // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 111'%3E%3Cstyle%3E.st1%7Bfill:%23bf0404%7D%3C/style%3E%3Cpath d='M48.8 109.2H26.4V26.5h22.4v82.7z' style='fill:%23a80000'/%3E%3Cpath d='m119 26.9.4 45.5-42.8-47.1-14.5 5v79.3h21l-.4-45.3 43 46.7 14.4-5.1v-79zM189.7 76.8l-20.8-51.5-22.3 4.9 33.6 79.4h17.4l33.7-79.4-20.5-4.9zM259.6 92.2V74.9h27.6V58.8h-27.6V43.9h30.7v-17h-52.5v82.7H292l3.7-17.4zM358.9 26.9l.4 45.5-42.9-47.1-14.5 5v79.3H323l-.4-45.3 43 46.7 14.4-5.1v-79z' class='st1'/%3E%3Cpath d='M0 0h22.5v22.5H0z' style='fill:%23f4b115'/%3E%3C/svg%3E");
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 111'%3E%3Cstyle%3E.st1%7Bfill:%23bf0404%7D%3C/style%3E%3Cpath d='M48.8 109.2H26.4V26.5h22.4v82.7z' style='fill:%23a80000'/%3E%3Cpath d='m119 26.9.4 45.5-42.8-47.1-14.5 5v79.3h21l-.4-45.3 43 46.7 14.4-5.1v-79zM189.7 76.8l-20.8-51.5-22.3 4.9 33.6 79.4h17.4l33.7-79.4-20.5-4.9zM259.6 92.2V74.9h27.6V58.8h-27.6V43.9h30.7v-17h-52.5v82.7H292l3.7-17.4zM358.9 26.9l.4 45.5-42.9-47.1-14.5 5v79.3H323l-.4-45.3 43 46.7 14.4-5.1v-79z' class='st1'/%3E%3Cpath d='M0 0h22.5v22.5H0z' style='fill:%23f4b115'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: auto;
+        background-position-x: center;
+        background-position-y: 39%;
+        background-size: 174px;
       }
     }
 
@@ -55,28 +108,28 @@
         margin: 0 0 12px;
         width: 445px;
         height: 50px;
-        border: 3px solid red;
+        border: 3px solid #bf0404;
         border-radius: 14px;
         font-size: 14px;
         box-sizing: border-box;
-        background-color: var(--var-header-ad-input-bgcolor);
-        border-color: var(--var-header-ad-input-bordercolor);
+        // background-color: var(--var-header-ad-input-bgcolor);
+        // border-color: var(--var-header-ad-input-bordercolor);
 
         input {
           box-sizing: border-box;
           width: calc(100% - 60px);
           height: 100%;
-          padding: 0 0 0 70px;
+          padding: 0 20px;
           border: 0;
           border-radius: 12px 0 0 12px;
           outline: 0;
           background-color: rgba(0, 0, 0, 0);
-          color: var(--var-header-ad-color);
-          font-weight: 600;
+          // font-weight: 600;
+          // color: var(--var-header-ad-color);
 
           &::placeholder {
             text-align: center;
-            color: var(--var-header-ad-color);
+            // color: var(--var-header-ad-color);
             font-weight: 600;
           }
         }
@@ -93,7 +146,8 @@
 
           svg {
             position: relative;
-            fill: var(--var-header-ad-input-searchiconcolor);
+            // fill: var(--var-header-ad-input-searchiconcolor);
+            fill: #bf0404;
             top: 2px;
             left: 1px;
             width: 27px;
@@ -106,6 +160,7 @@
         padding: 0 20px;
         height: 20px;
         text-align: center;
+        visibility: hidden;
 
         &.active {
           display: none;

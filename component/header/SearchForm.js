@@ -16,7 +16,7 @@ class SearchForm {
       )}`;
     });
     this.$searchInput = $("<input></input>");
-    this.$searchInput.attr("placeholder", "제노니아");
+    this.$searchInput.attr("placeholder", "검색어를 입력해 주세요");
     this.$searchInput.attr("name", "sw");
     this.$searchInput.attr("autocomplete", "off");
     this.$searchButton = $(`
