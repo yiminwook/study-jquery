@@ -1,6 +1,12 @@
+import RootLayout from "@/component/layout/RootLayout";
+import "@/component/layout/layout.less";
+
 class App {
-  constructor({ $taget }) {
-    console.log($taget);
+  $target = null;
+
+  constructor({ $target }) {
+    this.$target = $target;
+    this.$rootLayout = new RootLayout({ $target });
   }
 
   init() {}
