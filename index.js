@@ -1,4 +1,4 @@
-import App from "@/page/app";
+import App from "@/page/App";
 import "@/style/global.less";
 
 $(() => {
