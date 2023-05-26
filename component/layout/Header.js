@@ -30,10 +30,12 @@ class Header {
       if (windowTop >= 160) {
         $(".header-top").addClass("active");
         $(".header-nav").addClass("active");
+        $("#main").addClass("active");
         this.$header.addClass("active");
       } else {
         $(".header-top").removeClass("active");
         $(".header-nav").removeClass("active");
+        $("#main").removeClass("active");
         this.$header.removeClass("active");
       }
     });

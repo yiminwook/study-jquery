@@ -1,6 +1,7 @@
 @import "@/style/keyframes.less";
 
 #header {
+  z-index: 20;
   &.active {
     position: fixed;
     top: 0;
@@ -14,6 +15,9 @@
 
 #main {
   height: 130vh;
+  &.active {
+    margin-top: 215px;
+  }
 }
 
 #sidebar {
