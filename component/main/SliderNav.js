@@ -6,12 +6,12 @@ class SliderNav {
     this.$target = $target;
     this.$lists = $(`<ul></ul>`);
     this.$lists.addClass("slider-nav");
-    sliderArticles.forEach((data, index) => {
-      let list = $(`<li><a></a></li>`);
-      let a = list.find("a");
+    sliderArticles.forEach(({ title, link }, index) => {
+      const list = $(`<li><a></a></li>`);
+      const a = list.find("a");
       list.on("mouseenter", () => onMouse(index));
-      a.attr("href", data.link);
-      a.text(data.title);
+      a.attr("href", link);
+      a.text(title);
       this.$lists.append(list);
     });
 

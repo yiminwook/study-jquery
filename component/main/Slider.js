@@ -92,8 +92,8 @@ class Slider {
   }
 
   init() {}
-  setState(newdata) {
-    this.data = newdata;
+  setState(newData) {
+    this.data = newData;
     this.render();
   }
 

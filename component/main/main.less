@@ -44,3 +44,69 @@
   .slider-inner {
   }
 }
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  & > ul {
+    border-top: 2px solid #5f50b8;
+    border-bottom: 2px solid #d1d2d4;
+
+    li {
+      float: left;
+      height: 39px;
+      margin-right: 10px;
+      white-space: nowrap;
+
+      &:nth-child(1) {
+        a {
+          span {
+            color: rgb(0, 128, 255);
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        a {
+          span {
+            color: rgb(247, 129, 216);
+          }
+        }
+      }
+
+      &:nth-last-of-type(1)::after {
+        //float clear
+        content: "";
+        clear: both;
+      }
+
+      a {
+        display: block;
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+
+        span {
+          position: relative;
+          display: block;
+          line-height: 39px;
+        }
+
+        .active {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #e52f2f;
+          }
+        }
+      }
+    }
+  }
+}
