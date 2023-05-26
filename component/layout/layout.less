@@ -1,9 +1,9 @@
 @import "@/style/keyframes.less";
 
 #header {
-  z-index: 20;
   &.active {
     position: fixed;
+    z-index: 20;
     top: 0;
     left: 0;
     right: 0;
@@ -13,15 +13,21 @@
   }
 }
 
-#main {
-  height: 130vh;
+.main-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+
   &.active {
-    margin-top: 215px;
+    margin: 215px auto 0 auto;
   }
-}
 
-#sidebar {
-}
+  #main {
+    height: 130vh;
+  }
 
-#footer {
+  #sidebar {
+  }
+
+  #footer {
+  }
 }
