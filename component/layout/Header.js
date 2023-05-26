@@ -10,7 +10,7 @@ class Header {
   constructor({ $target }) {
     this.$target = $target;
     this.$header = $("<header></header>");
-    this.$header.attr("id", "header");
+    this.$header.addClass("header");
     this.$headerTop = $("<div></div>");
     this.$headerTop.addClass("header-top");
     this.$headerInner = $("<div></div>");

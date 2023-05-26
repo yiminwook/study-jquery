@@ -6,7 +6,7 @@ class Main {
 
   constructor({ $target }) {
     this.$target = $target;
-    this.$main = $("<main id=main></main>");
+    this.$main = $("<main class=main></main>");
     this.$slider = new Slider({ $target: this.$main });
     this.$target.append(this.$main);
   }

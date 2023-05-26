@@ -1,6 +1,6 @@
 @import "@/style/keyframes.less";
 
-#header {
+.header {
   &.active {
     position: fixed;
     z-index: 20;
@@ -15,19 +15,23 @@
 
 .main-wrapper {
   width: 1060px;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
+  display: grid;
+  grid-template-columns: 800px 250px;
+  gap: 10px;
 
   &.active {
     margin: 215px auto 0 auto;
   }
 
-  #main {
+  .main {
     height: 130vh;
   }
 
-  #sidebar {
+  .sidebar {
+    // display: flex;
   }
 
-  #footer {
+  .footer {
   }
 }

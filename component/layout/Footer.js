@@ -3,7 +3,7 @@ class Footer {
 
   constructor({ $target }) {
     this.$target = $target;
-    this.$footer = $("<footer id=footer>footer</footer>");
+    this.$footer = $("<footer class=footer>footer</footer>");
     this.$target.append(this.$footer);
   }
 
