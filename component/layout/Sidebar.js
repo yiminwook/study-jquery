@@ -1,7 +1,7 @@
-import Login from "@/component//sidebar/login";
+import Login from "@/component/sidebar/Login";
 import "@/component/sidebar/sidebar.less";
 import MiniMenu from "@/component/sidebar/MiniMenu";
-import Today from "@/component/sidebar/today";
+import Today from "@/component/sidebar/Today";
 
 class Sidebar {
   $target = null;
