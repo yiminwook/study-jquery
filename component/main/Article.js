@@ -1,3 +1,5 @@
+import ArticleContents from "./ArticleContent";
+
 const NAV_LIST = [
   {
     title: "인기뉴스",
@@ -46,9 +48,13 @@ class Article {
       this.$articleNav.append(articleNavList);
     });
 
+    this.$articleContents = $(`<div></div>`);
+
     this.$article.append(this.$articleNav);
+    this.$article.append(this.$articleContents);
     this.$target.append(this.$article);
     this.init();
+    this.render();
   }
 
   init() {
@@ -73,7 +79,11 @@ class Article {
     this.render();
   }
 
-  render() {}
+  render() {
+    if (!this.$articleContents) return;
+    this.$articleContents.text("");
+    new ArticleContents({ $target: this.$articleContents });
+  }
 }
 
 export default Article;

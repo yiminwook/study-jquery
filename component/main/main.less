@@ -41,8 +41,6 @@
       }
     }
   }
-  .slider-inner {
-  }
 }
 
 .article {
@@ -106,6 +104,46 @@
             background-color: #e52f2f;
           }
         }
+      }
+    }
+  }
+
+  dl {
+    div {
+      float: left;
+      cursor: pointer;
+      width: 162px;
+      box-shadow: 1px 1px 5px 1px #e8e8e8;
+      transition: all 0.2s ease;
+      padding-left: 5px;
+
+      &:first-child {
+        //첫번째 기사
+        width: 298px;
+        box-shadow: 1px 1px 5px 1px #e8e8e8;
+        transition: all 0.2s ease;
+        padding-left: 1px;
+      }
+
+      &:last-child::after {
+        content: "";
+        clear: both;
+      }
+
+      dt {
+        img {
+          max-width: 100%;
+          height: 132px;
+          position: static;
+          transform: none;
+        }
+      }
+
+      dd {
+        height: 70px;
+        padding: 5px 13px;
+        font-weight: bold;
+        color: #252525;
       }
     }
   }
