@@ -51,7 +51,7 @@ class Today {
 
   render() {
     this.$todayBody.text("");
-    const inner = $(`
+    const $inner = $(`
       <div>
         <ul></ul>
         <div class=more>
@@ -59,22 +59,22 @@ class Today {
         </div>
       </div>
     `);
-    const ul = inner.find("ul");
-    const more = inner.find(".more>a");
+    const $ul = $inner.find("ul");
+    const $more = $inner.find(".more>a");
 
     if (this.data === true) {
       for (let i = 1; i < 11; i++) {
-        ul.append($(`<li><span>${i}</span> 오늘의 핫벤</li>`));
-        more.attr("href", "https://hot.inven.co.kr");
+        $ul.append($(`<li><span>${i}</span> 오늘의 핫벤</li>`));
+        $more.attr("href", "https://hot.inven.co.kr");
       }
     } else {
       for (let i = 1; i < 11; i++) {
-        ul.append($(`<li><span>${i}</span> 오늘의 팟벤</li>`));
-        more.attr("href", "https://party.inven.co.kr");
+        $ul.append($(`<li><span>${i}</span> 오늘의 팟벤</li>`));
+        $more.attr("href", "https://party.inven.co.kr");
       }
     }
 
-    this.$todayBody.append(inner);
+    this.$todayBody.append($inner);
   }
 }
 

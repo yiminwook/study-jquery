@@ -26,7 +26,6 @@ class ArticleContents {
   constructor({ $target, data }) {
     this.$target = $target;
     // this.data = data
-
     this.render();
   }
 
@@ -35,7 +34,8 @@ class ArticleContents {
 
   render() {
     this.$target.text("");
-    const content = $("<dl></dl>");
+    const $articleContent = $("<dl></dl>");
+
     this.data.forEach(({ href, imageSrc, desc }) => {
       const $article = $(`
         <div>
@@ -44,11 +44,13 @@ class ArticleContents {
         </div>`);
       $article.find("img").attr("src", imageSrc);
       $article.find("dd").text(desc);
-      content.append($article);
+      $articleContent.append($article);
     });
-    content.css({ opacity: 0 });
-    this.$target.append(content);
-    content.animate({ opacity: 1 });
+    $articleContent.css({ opacity: 0 });
+    this.$target.append($articleContent);
+
+    //효과
+    $articleContent.animate({ opacity: 1 });
   }
 }
 

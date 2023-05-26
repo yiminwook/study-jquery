@@ -8,7 +8,7 @@ import image4 from "@/image/slider/4.jpg";
 import image5 from "@/image/slider/5.png";
 import image6 from "@/image/slider/6.png";
 
-export const sliderArticles = [
+export const SLIDER_ARTICLES = [
   {
     title: "AI와 저작권법",
     imageSrc: image0,
@@ -100,7 +100,7 @@ class Slider {
   render() {
     this.$sliderInner.text("");
     if (!this.$sliderInner) return;
-    sliderArticles.map((data, index) => {
+    SLIDER_ARTICLES.map((data, index) => {
       let child = new SliderChild({
         $target: this.$sliderInner,
         data: { ...data, active: index === this.data.selected },

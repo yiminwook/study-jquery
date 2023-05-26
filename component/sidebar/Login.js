@@ -17,9 +17,9 @@ class Login {
       </div>
     `);
 
-    this.loginButton = this.$login.find("a:eq(0)");
-    this.loginButton.addClass("login-btn");
-    this.loginButton.attr(
+    this.$loginButton = this.$login.find("a:eq(0)");
+    this.$loginButton.addClass("login-btn");
+    this.$loginButton.attr(
       "href",
       "https://member.inven.co.kr/user/scorpio/mlogin"
     );

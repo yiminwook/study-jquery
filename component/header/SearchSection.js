@@ -1,4 +1,4 @@
-import SearchForm from "./SearchForm";
+import SearchForm from "@/component/header/SearchForm";
 
 class SearchSection {
   $target = null;
@@ -29,12 +29,12 @@ class SearchSection {
   render() {
     if (this.$searchWord) {
       this.data.list.forEach((text) => {
-        let keywordLink =
+        const $keywordLink =
           $(`<li key=header-keyword-${text}><a href=https://www.inven.co.kr/search/webzine/top/${encodeURIComponent(
             text
           )}>${text}</a>s</li>
         `);
-        this.$searchWord.append(keywordLink);
+        this.$searchWord.append($keywordLink);
       });
     }
   }

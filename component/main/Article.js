@@ -1,4 +1,4 @@
-import ArticleContents from "./ArticleContent";
+import ArticleContents from "@/component/main/ArticleContent";
 
 const NAV_LIST = [
   {
@@ -42,9 +42,9 @@ class Article {
       articleNavList.on("mouseenter", () => {
         this.setState({ selected: index });
       });
-      const link = articleNavList.find("a");
-      link.attr("href", href);
-      link.find("span").text(title);
+      const $articleNavListLink = articleNavList.find("a");
+      $articleNavListLink.attr("href", href);
+      $articleNavListLink.find("span").text(title);
       this.$articleNav.append(articleNavList);
     });
 
@@ -63,8 +63,8 @@ class Article {
 
   handleNav() {
     if (!this.$articleNav) return;
-    const lists = this.$articleNav.find("li>a>span");
-    lists.each((index, el) => {
+    const $articleNavLists = this.$articleNav.find("li>a>span");
+    $articleNavLists.each((index, el) => {
       if (index === this.data.selected) {
         $(el).addClass("active");
       } else {
