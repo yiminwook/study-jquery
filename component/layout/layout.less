@@ -1,6 +1,7 @@
 @import "@/style/keyframes.less";
 
 .header {
+  position: relative;
   &.active {
     position: fixed;
     z-index: 20;
@@ -14,6 +15,7 @@
 }
 
 .main-wrapper {
+  position: relative;
   width: 1060px;
   margin: 10px auto 0 auto;
   display: grid;
@@ -25,6 +27,7 @@
   }
 
   .main {
+    position: relative;
     height: 130vh;
     display: flex;
     flex-direction: column;
@@ -32,12 +35,14 @@
   }
 
   .sidebar {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
   .footer {
+    position: relative;
     grid-column: 2 span;
   }
 }
