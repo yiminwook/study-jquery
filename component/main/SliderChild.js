@@ -25,6 +25,16 @@ class SliderChild {
     `);
 
     this.$sliderChild.find("img").attr("src", this.data.imageSrc);
+    this.$sliderChild.find("span:eq(1)").addClass("cate").text(this.data.cate);
+    this.$sliderChild
+      .find("span:eq(2)")
+      .addClass("subject")
+      .text(this.data.subject);
+    this.$sliderChild
+      .find("span:eq(3)")
+      .addClass("smrsubject")
+      .text(this.data.smrsubject);
+
     this.$sliderChild.css("opacity", 0);
     this.$target.append(this.$sliderChild);
     this.init();
