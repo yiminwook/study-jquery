@@ -1,0 +1,101 @@
+.infomation {
+  position: relative;
+  margin: 0 auto 20px auto;
+  border-top: 2px solid #cacaca;
+  background-color: #fff;
+
+  .menu-list {
+    display: block;
+    border-bottom: 1px solid #cbcbcb;
+    text-align: center;
+    float: none;
+
+    li {
+      display: inline-block;
+
+      &:not(.menu7) {
+        a::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 13px;
+          right: 0px;
+          width: 1px;
+          height: 11px;
+          background-color: #7d7b7b;
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 15px 10px 10px;
+        color: #7c7c7c;
+        font-size: 12px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  .info-content {
+    margin: 20px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    color: #525252;
+    line-height: 14px;
+    letter-spacing: -0.5px;
+
+    .info-text {
+      display: flex;
+
+      &::before {
+        content: "";
+        display: block;
+        position: relative;
+        top: -5px;
+        margin-right: 20px;
+        width: 107px;
+        height: 43px;
+        background-image: url(/image/footer_img_2022.png);
+        background-position: -10px -10px;
+        background-repeat: no-repeat;
+      }
+      .text-wrap {
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .info-banner {
+      display: flex;
+
+      .onc {
+        &::before {
+          content: "인터넷 신문 위원회 윤리강령을 준수합니다.";
+          display: block;
+          width: 190px;
+          height: 45px;
+          text-indent: -9999px;
+          background-image: url(/image/footer_img_2022.png);
+          background-position: 0px -132px;
+          background-size: 190px;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .isms {
+        &::before {
+          content: "2020.08.26 ~ 20203.08.25 인벤 온라인 서비스 운영 (웹진 커뮤니티, 마켓인벤)";
+          display: block;
+          width: 178px;
+          height: 43px;
+          text-indent: -9999px;
+          background-image: url(/image/footer_img_2022.png);
+          background-position: -9px -65px;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

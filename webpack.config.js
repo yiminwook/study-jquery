@@ -18,7 +18,11 @@ module.exports = ({ production }) => {
       rules: [
         {
           test: /\.less/,
-          use: ["style-loader", "css-loader", "less-loader"],
+          use: [
+            "style-loader",
+            { loader: "css-loader", options: { url: false } },
+            "less-loader",
+          ],
         },
         {
           test: /\.(png|jpe?g|gif|svg|webp)$/i,
